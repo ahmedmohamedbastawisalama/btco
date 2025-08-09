@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BTCO | Bahrain Creative Trade</title>
+<style>
+  /* Reset and Base Styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Glacial indifférent';
+    color: #333;
+    background: #000000;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  img { max-width: 100%; height: auto; border-radius: 10px; }
+  h1, h2, h3 { font-weight: 700; }
+  a { text-decoration: none; color: inherit; }
+
+  /* Header */
+  header {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0; z-index: 1000;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 1px;
+  }
+  nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #fdfdfd; }
+
+  /* Hero Section */
+.hero {
+  min-height: 100vh;
+  background:
+    url('https://img1.wsimg.com/isteam/ip/39e38324-b031-4d16-aceb-672149d376fb/blob-1eae198.png')
+    no-repeat top center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  padding-left: 1100px; /* This is very large — causes horizontal scroll on small devices */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero {
+    padding-left: 40px; /* reduce big padding on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 20px; /* even smaller padding for mobiles */
+    background-position: center center; /* keep image centered */
+  }
+}
+
+  .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+  .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+  .hero a {
+    background: #3e3e3e;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .hero a:hover { background: #d35400; }
+
+  /* Sections */
+  section { padding: 70px 40px; }
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+
+  /* About Section */
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .about .text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  /* Services */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .service {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+  .service h3 { margin: 15px 0; color: #f39c12; }
+
+  /* Black Highlight Section */
+  .highlight {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .highlight h2 {
+    color: white;
+    font-size: 2rem;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    background-size: 100%;
+  }
+
+  /* Gallery */
+  .gallery {
+    background: #000;
+    color: white;
+    text-align: center;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+  }
+  .gallery img { border-radius: 8px; }
+
+  /* Community Section */
+  .community {
+    background-color: black;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .community p { font-size: 1.2rem; margin-bottom: 12px; }
+
+  /* Contact Section */
+  .contact {
+    background: black;
+    color: white;
+    padding: 60px 20px;
+  }
+  .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .contact a { color: #000000; }
+  .contact a:hover { text-decoration: underline; }
+
+  /* Join Form */
+  .join {
+    background: black;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .join form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+  .join label { display: block; margin-bottom: 6px; }
+  .join input, .join textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+  }
+  .join button {
+    background: #000000;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .join button:hover { background: #0c2461; }
+
+  /* Footer */
+  footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">BTCO</div>
+    <div>
+      <a href="home.html">Home</a>
+      <a href="Participation.html">Participation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+  <style>
+  body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .images img {
+    max-width: 280px;
+    width: 100%;
+    object-fit: contain;
+  }
+  h2 {
+    font-weight: normal;
+    border-bottom: 1px solid #666;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .instructions {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  .instructions b {
+    color: #eee;
+  }
+  .downloads {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .download-box {
+    background-color: #000;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 1px solid #444;
+    cursor: pointer;
+  }
+  .download-box b {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .download-box button {
+    background-color: #333;
+    border: none;
+    color: #eee;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .download-box button:hover {
+    background-color: #555;
+  }
+  .submit-btn {
+    display: block;
+    margin: 0 auto 4rem;
+    padding: 0.7rem 2rem;
+    font-weight: bold;
+    background-color: #333;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+  }
+  .submit-btn:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    
+    
+
+
+
+    <style>
+  .images {
+    display: flex;
+    gap: 20px;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  .image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    color: white;  /* change color if needed */
+    font-size: 14px;
+    pointer-events: none;
+    text-align: left;
+    text-shadow:
+      -1px -1px 0 black,
+      0.1px -1px 0 black,
+      -0.1px 1px 0 black,
+      0.1px 0.1px 0 black;
+  }
+
+    .overlay-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  /* change color if needed */
+    font-size: 20px;
+    pointer-events: none;
+    text-align: center;
+        text-shadow:
+      -1px -1px 0 black,
+      0.1px -1px 0 black,
+      -0.1px 1px 0 black,
+      0.1px 0.1px 0 black;
+  }
+
+
+
+
+  @media (max-width: 800px) {
+  .overlay-text, .overlay-texts {
+    display: none !important;
+  }
+}
+
+</style>
+
+<div class="images">
+  <div class="image-container">
+    <img src="https://i.ibb.co/C5Pq8nhx/10.jpg" alt="Bahrain Immersive Experience Flyer 1" />
+    <div class="overlay-text">
+      
+    <h1 style="font-weight: normal; font-size: 0.6cm; margin: 0 0 1rem 0;">  BAHRAIN IMMERSIVE</h1>
+      <h1 style="font-weight: normal; font-size: 0.6cm; margin: 0 0 1rem 0;">Experience</h1>
+
+<p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">Pearling Path Visitor & Experience Center</p>
+<p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">Manama, Bahrain</p>
+
+<h1 style="font-weight: bold; font-size: 0.6cm; margin: 0 0 1rem 0;">November 6-8 2025</h1>
+
+<p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">November 4 -Press & Sponsors Cocktail at the Bahrain National Theatre</p>
+<p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">November 6,7,8 - B2B access, Conferences, Talks & Workshops</p>
+<p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">Continuous Exhibitions and Networking Opportunities</p>
+
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="https://i.ibb.co/Kzy970Jr/9.jpg" alt="Bahrain Immersive Experience Flyer 2" />
+    <div class="overlay-texts">
+      <p>Invitation</p>
+
+      <h1>November 6-8 2025</h1>
+      <p>Pearling Path Visitor & Experience Center</p>
+      <p>Manama, Bahrain</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function swapImages() {
+    const isSmallScreen = window.innerWidth <= 800;
+    
+    const imgContainers = document.querySelectorAll('.image-container img');
+    
+    if (isSmallScreen) {
+      imgContainers[0].src = 'https://i.ibb.co/1tSmzK5r/12.png';  // replace with your new image URL
+      imgContainers[1].src = 'https://i.ibb.co/kgDKhVnZ/11.png';  // replace with your new image URL
+    } else {
+      imgContainers[0].src = 'https://i.ibb.co/C5Pq8nhx/10.jpg';
+      imgContainers[1].src = 'https://i.ibb.co/Kzy970Jr/9.jpg';
+    }
+  }
+
+  // Run on load and on resize
+  window.addEventListener('load', swapImages);
+  window.addEventListener('resize', swapImages);
+</script>
+
+
+
+
+
+    <h2 style="font-weight: normal; font-size: 0.9cm; margin: 0 0 1rem 0;">BTCO 2025 - APPLY NOW</h2>
+
+    <p style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;" class="instructions">
+      Participation in BTCO 2025 is subject to a selection process conducted by our curatorial committee.<br />
+      To apply, please complete and return the <b>Application.</b>
+    </p>
+
+<div class="downloads" style="font-weight: normal; font-size: 0.5cm; margin: 0 0 1rem 0;">
+  <div class="download-box">
+    <b>Designer Registration (pdf)</b>
+    <button onclick="window.open('https://img1.wsimg.com/blobby/go/39e38324-b031-4d16-aceb-672149d376fb/downloads/cd8cd07d-0dff-4816-8d5a-43a8f047b66b/BTCO_Criteria%20admission.docx%20(1).pdf?ver=1754130651496', '_blank')">Download</button>
+  </div>
+  <div class="download-box">
+    <b>Professional Registration (pdf)</b>
+    <button onclick="window.open('https://img1.wsimg.com/blobby/go/39e38324-b031-4d16-aceb-672149d376fb/downloads/0f9bf179-5ce3-49c2-8a7e-02839db789b9/BTCO_Professional_Visitor_Application%20(1).pdf?ver=1754130651496', '_blank')">Download</button>
+  </div>
+</div>
+
+
+    <!-- <button class="submit-btn">Submit My Application</button> -->
+  </div>
+
+  <footer style="background-color: #000;">
+    <p>&copy; 2025 BTCO. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
