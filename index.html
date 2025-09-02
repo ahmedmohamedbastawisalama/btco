@@ -356,7 +356,7 @@
   <nav>
     <div class="logo">BTCO</div>
     <div>
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="Participation.html">Participation</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -365,7 +365,7 @@
 
 
   <section class="hero">
-<!--     <h1>November 6 - 8 2025</h1> -->
+    <!-- <h1>November 6 - 8 2025</h1> -->
     <p style="font-size: 24px;">Pearling path visitor and experience center 
       <br>
       Manama, Bahrain
@@ -497,52 +497,117 @@
 
 </style>
 
-<section id="about">
-  <div class="about-row">
+<style>
+  #about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #000; /* Black background */
+  }
 
-    <!-- LEFT SIDE -->
-<div class="highlight">
-  <div style="height: 50%;" class="image-containers">
-    <picture class="picture-large">
-    <source media="(max-width: 800px)" srcset="https://i.ibb.co/d0h2qjhy/2.png"  style="width: 400px;  height: auto;">
-    <img src="https://i.ibb.co/20pT1fJ9/1.jpg" alt="About Us" />
+  .highlight {
+    flex: 1 1 45%;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .highlight img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* LEFT SIDE text (centered) */
+  .overlay-texta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 90%;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  }
+
+  .overlay-texta h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .overlay-texta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .overlay-texta p {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .overlay-texts {
+  position: absolute;
+  top: 10px; /* stays near the top */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  width: 90%;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  padding-top: 10px; /* small padding from top */
+}
+
+.overlay-texts h2 {
+  font-size: 2rem;
+  margin: 5px 0; /* minimal spacing */
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .overlay-texts h2 { font-size: 1.5rem; }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .overlay-texts h2 { font-size: 1.2rem; }
+}
+
+</style>
+
+<section id="about">
+  <!-- LEFT SIDE -->
+  <div class="highlight">
+    <picture>
+      <source media="(max-width: 800px)" srcset="https://i.ibb.co/d0h2qjhy/2.png">
+      <img src="https://i.ibb.co/20pT1fJ9/1.jpg" alt="About Us">
     </picture>
     <div class="overlay-texta">
-      <h1 style="text-align: center;">BTCO</h1><br>
-      <h2>A New Standard in Creative Trade</h2><br>
-      <p style="font-weight: normal;">BTCO is Bahrain's first international B2B tradeshow dedicated to excellence in fine jewelry, fashion, design, and the arts.</p><br>
-      <p style="font-weight: normal;">Our mission is to establish Bahrain as a vibrant creative and commercial hub—bridging local talent with global markets.</p><br>
-      <p style="font-weight: normal;">Rooted in Bahrain's rich heritage and inspired by its dynamic future, BTCO offers a curated experience that seamlessly blends authenticity, innovation, and elegance.</p>
+      <h1>BTCO</h1>
+      <h2>A New Standard in Creative Trade</h2>
+      <p>BTCO is Bahrain's first international B2B tradeshow dedicated to excellence in fine jewelry, fashion, design, and the arts.</p>
+      <p>Our mission is to establish Bahrain as a vibrant creative and commercial hub—bridging local talent with global markets.</p>
+      <p>Rooted in Bahrain's rich heritage and inspired by its dynamic future, BTCO offers a curated experience that seamlessly blends authenticity, innovation, and elegance.</p>
     </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="highlight">
+  <picture>
+    <source media="(max-width: 800px)" srcset="https://i.ibb.co/0V87FFrh/3.png">
+    <img src="https://i.ibb.co/DDL5gFDT/2.jpg" alt="Values Image">
+  </picture>
+  <div class="overlay-texts">
+    <h2>EUROPEAN TOUCH</h2>
+    <h2>KNOW-HOW</h2>
+    <h2>GLOBAL PERSPECTIVE</h2>
+    <h2>TAILORED SOLUTIONS</h2>
+    <h2>CREATIVE VISION</h2>
   </div>
 </div>
 
-
-    <!-- RIGHT SIDE -->
-    <div class="highlight">
-      <div class="image-container">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <picture>
-<source media="(max-width: 800px)" srcset="https://i.ibb.co/0V87FFrh/3.png">
-        <img style="align-items: right;" src="https://i.ibb.co/DDL5gFDT/2.jpg" alt="Values Image" style="max-width: 500px; height: 500px;">
-        </picture>
-        <div class="overlay-texts">
-          <br><br><br><br><br><br>
-          <h2>EUROPEAN TOUCH</h2>
-          <br>
-          <h2>KNOW-HOW</h2>
-          <br>
-          <h2>GLOBAL PERSPECTIVE</h2>
-          <br>
-          <h2>TAILORED SOLUTIONS</h2>
-          <br>
-          <h2>CREATIVE VISION</h2>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </section>
+
 
 <div style="background-color: white; height: 5px; width: 100%;"></div>
 
@@ -628,20 +693,89 @@
   
 </style>
 
+<style>
+  .two-column-container {
+    display: flex;
+    flex-wrap: wrap; /* stack columns on small screens */
+    justify-content: center; /* center columns horizontally */
+    gap: 2rem;
+    text-align: center; /* center all text by default */
+    padding: 2rem;
+  }
+
+  .column {
+    flex: 1 1 45%; /* take up 45% of width on large screens */
+    min-width: 300px; /* ensures column doesn’t shrink too much */
+  }
+
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .about-text p {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  img.services-image {
+    width: 100%; /* responsive width */
+    height: auto; /* maintain aspect ratio */
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+
+  /* Tablets */
+  @media screen and (max-width: 1024px) {
+    h1, h2 {
+      font-size: 2rem;
+    }
+    .about-text p {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+    .about-text p {
+      font-size: 1.2rem;
+    }
+    .two-column-container {
+      flex-direction: column; /* stack columns vertically */
+      text-align: center;
+    }
+    .column {
+      min-width: 100%; /* full width on mobile */
+    }
+  }
+</style>
+
 <div class="two-column-container">
   <!-- LEFT COLUMN -->
   <section class="column" id="services">
-    <h2 style="font-weight: bold; font-size: 2.5rem;">What We Offer</h2><br><br>
-<div class="about-text">
-  <p style="font-weight: normal; font-size: 2.0rem;"> - Premium B2B Tradeshow with 180 curated exhibitors</p><br>
-  <p style="font-weight: normal; font-size: 2.0rem;"> - VIP Cradle Tours across Bahrain's cultural heritage sites</p><br>
-  <p style="font-weight: normal; font-size: 2.0rem;"> - Digital platform with e-commerce and storytelling features</p><br>
-  <p style="font-weight: normal; font-size: 2.0rem;"> - Conferences, panels, and workshops led by global experts</p><br>
-  <p style="font-weight: normal; font-size: 2.0rem;"> - Strategic matchmaking with global retailers and embassies</p><br>
-</div>
-
+    <h2>What We Offer</h2>
+    <div class="about-text">
+      <p>- Premium B2B Tradeshow with 180 curated exhibitors</p>
+      <p>- VIP Cradle Tours across Bahrain's cultural heritage sites</p>
+      <p>- Digital platform with e-commerce and storytelling features</p>
+      <p>- Conferences, panels, and workshops led by global experts</p>
+      <p>- Strategic matchmaking with global retailers and embassies</p>
+    </div>
     <img
-      class="services-image" style="width: 1000px; height: 560px;"
+      class="services-image"
       src="https://i.ibb.co/hJW7Cz8v/4.jpg"
       alt="What We Offer Image"
     />
@@ -649,24 +783,23 @@
 
   <!-- RIGHT COLUMN -->
   <section class="column">
-    <h1 style="font-weight: Bold; font-size: 2.5rem; text-align: center;">Our Purpose</h1><br><br>
-    <h2 style="font-weight: Bold; font-size: 2.1rem; text-align: left;">Empowering Creative Excellence</h2><br>
+    <h1>Our Purpose</h1>
+    <h2>Empowering Creative Excellence</h2>
     <div class="about-text">
-      <p style="font-weight: normal; font-size: 2.0rem;">
+      <p>
         At BTCO, we believe in the transformative power of creativity.
         Our platform champions inclusive economic growth by promoting women, youth, and cultural industries—
         aligning with Bahrain Economic Vision 2030.
-      </p><br>
-      <p style="font-weight: normal; font-size: 2.0rem;">
+      </p>
+      <p>
         We showcase local craftsmanship on a global stage, drive trade, innovation, and strategic partnerships,
         and build lasting visibility for Bahrain's creative economy.
       </p>
     </div>
-
-        <img
-      class="services-image" style="width: 1000px;"
+    <img
+      class="services-image"
       src="https://i.ibb.co/JwsjxRBn/foster-partners-the-house-of-wisdom-libraries-archello-1615470309-8784-1707824499-4311.jpg"
-      alt="What We Offer Image"
+      alt="Our Purpose Image"
     />
   </section>
 </div>
@@ -705,40 +838,98 @@
       <h1 style="font-weight: normal; font-size: 2.5rem; margin: 0;">Pearling Path Visitor & Experience Center</h2>
       <h1 style="font-weight: normal; font-size: 2.5rem; margin-bottom: 1rem;">Manama, Bahrain</h2><br><br>
       
-<!--       <h1 style="font-weight: bold; font-size: 2.2rem; margin-bottom: 1rem;">November 6-8 2025</h2><br><br> -->
+      <h1 style="font-weight: bold; font-size: 2.2rem; margin-bottom: 1rem;">November 6-8 2025</h2><br><br>
       
-<!--       <p style="font-weight: normal; font-size: 2rem; margin: 0 0 1rem 0;">
+      <p style="font-weight: normal; font-size: 2rem; margin: 0 0 1rem 0;">
         November 4 - Press & Sponsors Cocktail at the Bahrain National Theatre
-      </p><br> -->
+      </p><br>
       
-<!--       <p style="font-weight: bold; font-size: 2rem; margin: 0;">
+      <p style="font-weight: bold; font-size: 2rem; margin: 0;">
         November 6,7,8 - B2B access, Conferences, Talk & Workshops continuous Exhibitions and Networking Opportunities
-      </p> -->
+      </p>
     </div>
   </div>
 </section>
 
 
   <!-- RIGHT COLUMN -->
-<section class="column">
-  <h2 style="font-weight: bold; font-size: 2.8rem;">Our Community</h2><br><br>
-  <p style="font-weight: bold; font-size: 2.5rem; margin-top: 0;">Connecting Global Creative Forces</p>
+<style>
+  .community-section {
+    text-align: center; /* center all text */
+    padding: 2rem;
+  }
+
+  .community-section h2 {
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .community-section p.subtitle {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .community-section .about-text p {
+    font-weight: normal;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .community-section img.services-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+
+  /* Tablet screens */
+  @media screen and (max-width: 1024px) {
+    .community-section h2 {
+      font-size: 2.2rem;
+    }
+    .community-section p.subtitle {
+      font-size: 2rem;
+    }
+    .community-section .about-text p {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Mobile screens */
+  @media screen and (max-width: 600px) {
+    .community-section h2 {
+      font-size: 1.8rem;
+    }
+    .community-section p.subtitle {
+      font-size: 1.5rem;
+    }
+    .community-section .about-text p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<section class="community-section">
+  <h2>Our Community</h2>
+  <p class="subtitle">Connecting Global Creative Forces</p>
   
-  <div class="about-text" style="margin-top: 1rem;">
-    <p style="font-weight: normal; font-size: 2rem; margin: 0;"> - 70 Bahrain designers</p>
-    <p style="font-weight: normal; font-size: 2rem; margin: 0;"> - 110 international brands from 30+ countries</p>
-    <p style="font-weight: normal; font-size: 2rem; margin: 0;"> - 100+ luxury retailers and global buyers targeted</p>
-    <p style="font-weight: normal; font-size: 2rem; margin: 0;"> - 4,300+ high-end professionals expected</p>
-    <p style="font-weight: normal; font-size: 2rem; margin: 0;"> - Full diplomatic mobilization of embassies in Bahrain</p>
+  <div class="about-text">
+    <p>- 70 Bahrain designers</p>
+    <p>- 110 international brands from 30+ countries</p>
+    <p>- 100+ luxury retailers and global buyers targeted</p>
+    <p>- 4,300+ high-end professionals expected</p>
+    <p>- Full diplomatic mobilization of embassies in Bahrain</p>
   </div>
-<br><br>
+
   <img
     class="services-image"
     src="https://i.ibb.co/QgVdcCV/6.jpg"
-    alt="Right Image"
-    style="margin-top: 20px; max-width: 100%; height: auto;"
+    alt="Our Community Image"
   />
 </section>
+
 
 </div>
 
@@ -799,34 +990,88 @@
 
 
   <!-- RIGHT COLUMN -->
-<section class="column" style="text-align: center;">
+<style>
+  .contact-section {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+  }
+
+  .contact-section img {
+    width: 70%;
+    max-width: 400px; /* ensures image doesn’t get too big on large screens */
+    height: auto;
+    margin: 0 auto 2rem auto;
+    display: block;
+  }
+
+  .contact-section h2 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+
+  .contact-section p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-section a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Tablet screens */
+  @media screen and (max-width: 1024px) {
+    .contact-section h2 {
+      font-size: 2.5rem;
+    }
+    .contact-section p {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Mobile screens */
+  @media screen and (max-width: 600px) {
+    .contact-section h2 {
+      font-size: 2rem;
+    }
+    .contact-section p {
+      font-size: 1.2rem;
+    }
+    .contact-section img {
+      width: 90%;
+    }
+  }
+</style>
+
+<section class="contact-section">
   <img 
     src="https://i.ibb.co/N608tcVB/8-Photoroom.png" 
-    alt="Contact Image" 
-    style="width: 70%; height: auto; margin: 0 auto; display: block;"
+    alt="Contact Image"
   />
-  <div style="color: white; margin-top: 2rem;">
-    <h2 style="font-weight: bold; font-size: 3rem; margin-bottom: 1.5rem; color: #ccc;">CONTACT</h2>
-    <p style="font-size: 2rem; margin-bottom: 1rem;">
-      AMOB Company W.L.L - Diplomatic Area, Bahrain
-    </p>
-    <p style="font-size: 2rem; margin-bottom: 1rem;">
-      <a href="https://www.btco-organizations.com" target="_blank" style="color: white; text-decoration: none;">
+  <div>
+    <h2>CONTACT</h2>
+    <p>AMOB Company W.L.L - Diplomatic Area, Bahrain</p>
+    <p>
+      <a href="https://www.btco-organizations.com" target="_blank">
         www.btco-organizations.com
       </a>
     </p>
-    <p style="font-size: 2rem; margin-bottom: 1rem;">
-      <a href="mailto:info@btco-organizations.com" style="color: white; text-decoration: none;">
+    <p>
+      <a href="mailto:info@btco-organizations.com">
         info@btco-organizations.com
       </a>
     </p>
-    <p style="font-size: 2rem; margin-bottom: 1rem;">
-      <a href="tel:+97332287214" style="color: white; text-decoration: none;">
+    <p>
+      <a href="tel:+97332287214">
         +973 3228 7214
       </a>
     </p>
   </div>
 </section>
+
 
 </div>
 
@@ -853,7 +1098,7 @@
 
   .column {
     flex: 1 1 45%;
-    min-width: 300px;
+    min-width: 350px;
     position: relative;
     overflow: hidden;
   }
@@ -894,7 +1139,7 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     " class="overlay-textss">
       <h1 style="font-size: 3rem; margin-bottom: 1rem;">Invitation</h2>
-<!--       <h1 style="font-weight: bold; font-size: 3rem; margin-bottom: 1rem;">November 6 - 8 2025</h1> -->
+      <h1 style="font-weight: bold; font-size: 3rem; margin-bottom: 1rem;">November 6 - 8 2025</h1>
       <p style="font-size: 2.2rem; margin-bottom: 0.5rem;">Pearling Path Visitor & Experience Center</p>
       <p style="font-size: 2.2rem; margin: 0;">Manama</p>
     </div>
@@ -943,15 +1188,15 @@
       
       <p style="font-size: 1.7rem; margin: 0.5rem 0;">Pearling Path Visitor & Experience Center</p>
       <p style="font-size: 1.7rem; margin: 0.5rem 0;">Manama, Bahrain</p><br>
-<!--       <p style="font-size: 2.2rem; margin: 1rem 0; font-weight: bold;">November 6-8 2025</p><br> -->
+      <p style="font-size: 2.2rem; margin: 1rem 0; font-weight: bold;">November 6-8 2025</p><br>
 
-<!--       <h1 style="font-weight: bold; font-size: 1.7rem; margin: 1rem 0;">
+      <h1 style="font-weight: bold; font-size: 1.7rem; margin: 1rem 0;">
         November 4 - Press & Sponsors Cocktail at the Bahrain National Theatre
-      </h1> -->
+      </h1>
       
-<!--       <p style="font-size: 1.7rem; margin: 0.5rem 0;">
+      <p style="font-size: 1.7rem; margin: 0.5rem 0;">
         November 6,7,8 - B2B access, Conferences, Talk & Workshops continuous Exhibitions and Networking Opportunities
-      </p><br><br><br> -->
+      </p><br><br><br>
       
       <p style="font-size: 1.7rem; margin: 0.5rem 0; text-align: center;">The Creative Bridge Between Bahrain and the World</p>
       <p style="font-size: 1.7rem; margin: 0.5rem 0; text-align: center;">RSVP: info@btco-organizations.com</p>
@@ -1099,7 +1344,3 @@
 
 </body>
 </html>
-
-
-
-
